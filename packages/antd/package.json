@@ -1,0 +1,14 @@
+{
+  "name": "@zl/antd",
+  "version": "0.0.1",
+  "description": "基于 antd 的二次封装",
+  "license": "MIT",
+  "module": "index.ts",
+  "scripts": {},
+  "dependencies": {
+    "@zl/utils": "workspace:*"
+  },
+  "author": {
+    "name": "chenzl"
+  }
+}

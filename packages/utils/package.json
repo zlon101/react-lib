@@ -1,0 +1,6 @@
+{
+  "name": "@zl/utils",
+  "version": "0.0.2",
+  "description": "工具类函数封装",
+  "module": "index.js"
+}

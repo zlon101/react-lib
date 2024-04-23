@@ -1,0 +1,11 @@
+{
+  "name": "@zl/hooks",
+  "version": "0.0.1",
+  "description": "自定义 hook 封装",
+  "license": "MIT",
+  "module": "index.js",
+  "types": "index.d.ts",
+  "author": {
+    "name": "test"
+  }
+}

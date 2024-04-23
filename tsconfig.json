@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "baseUrl": "./",
+    "paths": {
+      "@@/*": [".dumi/tmp/*"],
+      "dumi-demo": ["packages"],
+      "dumi-demo/*": ["packages/*", "*"],
+      "@zl/antd": ["packages/antd"],
+      "@zl/*": ["packages/*", "*"]
+    }
+  },
+  "include": [".dumirc.ts", "packages/**/*"]
+}
