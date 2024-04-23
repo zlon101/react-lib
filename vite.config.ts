@@ -17,6 +17,7 @@ export default defineConfig({
     alias: {
       // '@pages': pathResolve('./src/pages'),
       // '@cmp': pathResolve('./src/components'),
+      '@': pathResolve('./src'),
       '@utils': pathResolve('./src/utils'),
       '@test': pathResolve('./src/test'),
     },
