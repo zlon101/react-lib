@@ -18,11 +18,10 @@ export default defineConfig({
       // '@pages': pathResolve('./src/pages'),
       // '@cmp': pathResolve('./src/components'),
       '@': pathResolve('./src'),
-      '@utils': pathResolve('./src/utils'),
       '@test': pathResolve('./src/test'),
     },
   },
   optimizeDeps: {
-    include: ['src/utils/crypto-js', '@utils/crypto-js'],
+    include: ['src/utils/crypto-js', '@/utils/crypto-js'],
   },
 });

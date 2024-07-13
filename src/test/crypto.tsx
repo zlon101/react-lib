@@ -1,7 +1,7 @@
-import {useCallback, useEffect, useState} from 'react';
-import CryptoJS, {AES, SHA512, enc} from '@utils/crypto-js';
-import {log} from '@utils';
-import * as gitlabApi from '@utils/gitlab';
+import {useCallback, useEffect} from 'react';
+import CryptoJS, {AES, SHA512, enc} from '@/utils/crypto-js';
+import {log} from '@/utils';
+import * as gitlabApi from '@/utils/gitlab';
 
 export function CryptoJsDemo() {
   const ciphertext = AES.encrypt('my message', 'secret key 123').toString();

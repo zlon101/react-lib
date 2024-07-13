@@ -5,12 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
+    "build2": "tsc && vite build",
     "lint": "eslint src --fix --ext js,jsx,ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prettier": "prettier --write src/**/**/*.{js,ts,jsx,tsx}"
   },
   "dependencies": {
+    "antd": "5.16.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

@@ -1,0 +1,9 @@
+.input {
+  &::placeholder {
+    transition: all 0.3s ease-in-out;
+  }
+  &:focus::placeholder {
+    transform: translateY(-100%);
+    opacity: 0.7;
+  }
+}

@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import {JSEncrypt} from './index';
-import {log} from '@utils';
+import {log} from '@/utils';
 
 const Privkey = `-----BEGIN RSA PRIVATE KEY-----
 MIICXQIBAAKBgQDlOJu6TyygqxfWT7eLtGDwajtNFOb9I5XRb6khyfD1Yt3YiCgQ
@@ -56,7 +56,7 @@ function TestJsencrypt() {
     encrypt.setPublicKey(pubkey);
     log('msg', msg);
     const encrypted = encrypt.encrypt(msg);
-    setEnMsg(encrypted);
+    setEnMsg(encrypted as string);
   };
 
   const onDecrypto = () => {

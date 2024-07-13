@@ -6,25 +6,36 @@ export function getType(val: any, expectType?: string): string | boolean {
   return reaType;
 }
 
-export function createRegExp(searchText: string, param?: {isAllMatch: boolean; isCase: boolean}) {
-  if (!searchText) return null;
-  let isRegMode = false
+interface IParam {
+  isAllMatch?: boolean;
+  isCase?: boolean;
+  global?: boolean;
+}
+const DefaultConf = {
+  global: true,
+};
+
+export function createRegExp(searchText: string | RegExp, conf: IParam = DefaultConf): [RegExp, boolean] {
+  let isRegMode = false;
   let reg = null;
+  if (searchText instanceof RegExp) {
+    return [searchText, true];
+  }
   if (/^\//.test(searchText)) {
     isRegMode = true;
     const regModifier = /\/(\w*)$/;
     let modifier = regModifier.exec(searchText)![1];
-    !modifier.includes('g') && (modifier += 'g');
+    if (!modifier.includes('g') && conf.global) {
+      modifier += 'g';
+    }
     regModifier.lastIndex = 0;
     reg = new RegExp(searchText.slice(1).replace(regModifier, ''), modifier);
   } else {
     searchText = searchText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    if (param?.isAllMatch) {
+    if (conf?.isAllMatch) {
       searchText = `\\b${searchText}\\b`;
     }
-    reg = new RegExp(searchText, param?.isCase ? 'gm' : 'gmi');
+    reg = new RegExp(searchText, conf?.isCase ? 'gm' : 'gmi');
   }
   return [reg, isRegMode];
 }
-
-

@@ -5,3 +5,7 @@ import './index.less';
 
 // <React.StrictMode>
 ReactDOM.createRoot(document.getElementById('root')!).render(<App />);
+
+
+// import * as serviceWorker from './serviceWorker';
+// serviceWorker.register();
